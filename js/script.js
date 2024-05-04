@@ -15,7 +15,7 @@ let countORank = 0;
 let playerType = false;
 let items = [];
 
-if(location.pathname == "/game.html"){
+if(location.pathname == "/TIC-TAC-TOE/game.html"){
 
     setInterval(function displayNames(){
 
