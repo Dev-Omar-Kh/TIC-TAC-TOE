@@ -15,7 +15,10 @@ let countORank = 0;
 let playerType = false;
 let items = [];
 
-if(location.pathname == "/TIC-TAC-TOE/game.html"){
+let locationPath = location.pathname.split('/')
+console.log(locationPath[locationPath.length-1]);
+
+if(locationPath[locationPath.length-1] == "game.html"){
 
     setInterval(function displayNames(){
 
@@ -86,13 +89,11 @@ function winner(item1 , item2 , item3){
 
     if(playerType){
 
-        console.log("playerX is win");
         document.getElementById("x_rank").innerHTML = countXRank+=1
 
     }
     else if(!playerType){
 
-        console.log("playerO is win");
         document.getElementById("o_rank").innerHTML = countORank+=1
 
     }
