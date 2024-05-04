@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <!-- meta -->
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- icon -->
+
+        <link rel="icon" href="image/icon.png">
+
+        <!-- style-inks -->
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- animate-css -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <!-- title -->
+
+        <title>Tic-Tac-Toe</title>
+
+    </head>
+
+    <body>
+
+        <section class="root">
+
+            <div class="audio">
+
+                <audio id="oTone" src="audio/OTone.mp3" type="audio/mpeg"></audio>
+                <audio id="winTone" src="audio/win.mp3" type="audio/mpeg"></audio>
+                <audio id="xTone" src="audio/xTone.mp3" type="audio/mpeg"></audio>
+                <audio id="drawTone" src="audio/draw.wav" type="audio/wav"></audio>
+
+            </div>
+
+            <button class="new_game_btn" id="log_out" onclick="newGame()">New Game</button>
+
+            <div class="score">
+
+                <div class="player_1">
+
+                    <p id="name_1"></p>
+
+                    <span id="x_rank" class="animate__animated animate__flash">0</span>
+
+                </div>
+
+                <div class="player_2">
+
+                    <p id="name_2"></p>
+
+                    <span id="o_rank" class="animate__animated animate__flash">0</span>
+
+                </div>
+
+            </div>
+
+            <div class="board">
+
+                <span class="cell"><div class="cell_container" id="item_0" onclick="game(this.id)"></div></span>
+                <span class="cell"><div class="cell_container" id="item_1" onclick="game(this.id)"></div></span>
+                <span class="cell"><div class="cell_container" id="item_2" onclick="game(this.id)"></div></span>
+                <span class="cell"><div class="cell_container" id="item_3" onclick="game(this.id)"></div></span>
+                <span class="cell"><div class="cell_container" id="item_4" onclick="game(this.id)"></div></span>
+                <span class="cell"><div class="cell_container" id="item_5" onclick="game(this.id)"></div></span>
+                <span class="cell"><div class="cell_container" id="item_6" onclick="game(this.id)"></div></span>
+                <span class="cell"><div class="cell_container" id="item_7" onclick="game(this.id)"></div></span>
+                <span class="cell"><div class="cell_container" id="item_8" onclick="game(this.id)"></div></span>
+
+            </div>
+
+        </section>
+
+        <script src="js/script.js"></script>
+
+    </body>
+
+</html>
