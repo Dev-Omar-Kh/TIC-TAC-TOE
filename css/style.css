@@ -315,6 +315,17 @@ body{
 
 }
 
+.header{
+
+    width: calc(var(--cell-size-small) * 2);
+    height: var(--cell-size-small);
+    margin: auto;
+    margin-bottom: 80px;
+    display: flex;
+    color: var(--white-color);
+
+}
+
 .form__group{
 
     position: relative;

@@ -15,6 +15,8 @@ let countORank = 0;
 let playerType = false;
 let items = [];
 
+document.getElementById("header").innerHTML = `${x} &nbsp; ${o}`;
+
 let locationPath = location.pathname.split('/')
 console.log(locationPath[locationPath.length-1]);
 
@@ -98,6 +100,7 @@ function winner(item1 , item2 , item3){
 
     }
 
+    drawTone.pause();
     winTone.play();
 
 }
@@ -117,6 +120,19 @@ function restartGame(){
             document.getElementById(`item_${i}`).style.opacity = "1";
         
         } , 2000);
+
+    }
+
+    if(playerType){
+
+        // plyer X is start
+        playerType = false;
+
+    }
+    else{
+
+        // player O is start
+        playerType = true;
 
     }
 
