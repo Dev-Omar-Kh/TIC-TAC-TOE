@@ -13,6 +13,7 @@ const drawTone = document.getElementById("drawTone");
 let countXRank = 0;
 let countORank = 0;
 let playerType = false;
+let playerWin = "";
 let items = [];
 
 // display names of players
@@ -87,12 +88,18 @@ function winner(item1 , item2 , item3){
 
     // count rank
 
-    if(playerType){
+    let whoWin = document.getElementById(`item_${item1}`)
+
+    if(whoWin.innerHTML === x){
+
+        playerWin = "playerX"
 
         document.getElementById("x_rank").innerHTML = countXRank+=1
 
     }
-    else if(!playerType){
+    else if(whoWin.innerHTML === o){
+
+        playerWin = "playerO"
 
         document.getElementById("o_rank").innerHTML = countORank+=1
 
@@ -121,13 +128,13 @@ function restartGame(){
 
     }
 
-    if(playerType){
+    if(playerWin === "playerX"){
 
         // plyer X is start
         playerType = false;
 
     }
-    else{
+    else if(playerWin === "playerO"){
 
         // player O is start
         playerType = true;
@@ -146,7 +153,10 @@ function compare(){
 
     // draw status
 
-    if(items[0] != '' && items[1] != '' && items[2] != '' && items[3] != '' && items[4] != '' && items[5] != '' && items[6] != '' && items[7] != '' && items[8] != ''){
+    if(
+        items[0] != '' && items[1] != '' && items[2] != '' && items[3] != '' && 
+        items[4] != '' && items[5] != '' && items[6] != '' && items[7] != '' && items[8] != ''
+    ){
 
         draw();
         restartGame();
