@@ -39,13 +39,13 @@
 
             </div>
 
-            <button class="new_game_btn" id="log_out" onclick="newGame()">New Game</button>
+            <button class="new_game_btn animate__animated animate__bounceIn" id="log_out" onclick="newGame()">New Game</button>
 
             <div class="score">
 
                 <div class="player_1">
 
-                    <p id="name_1"></p>
+                    <p class="animate__animated animate__flash" id="name_1"></p>
 
                     <span id="x_rank" class="animate__animated animate__flash">0</span>
 
@@ -53,7 +53,7 @@
 
                 <div class="player_2">
 
-                    <p id="name_2"></p>
+                    <p class="animate__animated animate__flash" id="name_2"></p>
 
                     <span id="o_rank" class="animate__animated animate__flash">0</span>
 
@@ -61,7 +61,7 @@
 
             </div>
 
-            <div class="board">
+            <div class="board animate__animated animate__bounceIn">
 
                 <span class="cell"><div class="cell_container" id="item_0" onclick="game(this.id)"></div></span>
                 <span class="cell"><div class="cell_container" id="item_1" onclick="game(this.id)"></div></span>

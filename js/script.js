@@ -15,17 +15,15 @@ let countORank = 0;
 let playerType = false;
 let items = [];
 
+// display names of players
+
 let locationPath = location.pathname.split('/')
 console.log(locationPath[locationPath.length-1]);
 
 if(locationPath[locationPath.length-1] == "game.html"){
 
-    setInterval(function displayNames(){
-
-        playerXLocal.innerHTML = `${localStorage.getItem("playerX")} <span class="player_type">X</span>`;
-        playerOLocal.innerHTML = `${localStorage.getItem("playerO")} <span class="player_type">O</span>`;
-
-    } , 1000);
+    playerXLocal.innerHTML = `${localStorage.getItem("playerX")} <span class="player_type">X</span>`;
+    playerOLocal.innerHTML = `${localStorage.getItem("playerO")} <span class="player_type">O</span>`;
 
 }
 
