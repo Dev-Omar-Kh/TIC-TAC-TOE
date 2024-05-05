@@ -15,8 +15,6 @@ let countORank = 0;
 let playerType = false;
 let items = [];
 
-document.getElementById("header").innerHTML = `${x} &nbsp; ${o}`;
-
 let locationPath = location.pathname.split('/')
 console.log(locationPath[locationPath.length-1]);
 
@@ -30,6 +28,8 @@ if(locationPath[locationPath.length-1] == "game.html"){
     } , 1000);
 
 }
+
+document.getElementById("header").innerHTML = `${x} &nbsp; ${o}`;
 
 function newGame(){
 
